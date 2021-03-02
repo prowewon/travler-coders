@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.java.web.mapper.CourseMapper">
+	<select id="getList" resultType="com.java.web.domain.CourseVO">
+		SELECT COURSE_NUMBER AS courseNum, COURSE_NAME AS courseName, COURSE_SUBHEADING AS courseSubHeading, COURSE_IMAGE AS courseImg
+		FROM (SELECT ROWNUM, COURSE_NUMBER, COURSE_NAME, COURSE_SUBHEADING, COURSE_IMAGE
+      		  FROM courses
+      		  ORDER BY COURSE_NUMBER DESC)
+		WHERE ROWNUM BETWEEN 1 AND 6
+	</select>
+</mapper>

@@ -1,0 +1,99 @@
+.login-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+.login-main__title {
+  font-size: 33px;
+  font-weight: 500;
+}
+
+.login-form {
+  margin: 50px 0;
+  width: 450px;
+  box-shadow: 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 40px;
+  box-sizing: border-box;
+}
+
+.login-form__title {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 8px;
+}
+
+.login-form__btns {
+  height: 38px;
+  border-radius: 8px;
+}
+
+.login-form__email {
+  border: 1px solid #d2d6dc;
+  margin-bottom: 20px;
+}
+
+.login-form__btn {
+  background-color: var(--blue);
+  color: white;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.or__line {
+  position: relative;
+  width: 450px;
+  border-bottom: 2px solid #d2d6dc;
+  text-align: center;
+  margin-bottom: 45px;
+}
+.or__title {
+  position: absolute;
+  width: 60px;
+  background-color: #f9fafb;
+  right: 43%;
+  top: -7px;
+}
+
+.button__box {
+  display: flex;
+  flex-direction: column;
+}
+
+.button__box a {
+  box-sizing: border-box;
+  text-align: center;
+  padding-top: 12px;
+  width: 320px;
+  height: 45px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.button__box a i {
+  font-size: 20px;
+}
+
+.button__kakao {
+  background-color: #fdea3f;
+}
+
+.button__github {
+  background-color: #374151;
+  color: white;
+}
+
+.join__checkboxes {
+  margin-bottom: 20px;
+  text-align: justify;
+}

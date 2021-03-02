@@ -1,0 +1,15 @@
+.main__title__carrier {
+  text-align: center;
+  margin-bottom: 130px;
+}
+
+.main__title {
+  font-size: 48px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.main__second-title {
+  font-size: 20px;
+  opacity: 0.7;
+}

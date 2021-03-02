@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.java.web.mapper.UserMapper">
+	<select id="getList" resultType="com.java.web.domain.UserVO">
+		SELECT USER_NUMBER AS userNo, USER_NAME AS userName, USER_EMAIL AS userEmail, USER_PASSWORD AS userPassword, PRIVACY_FLAG AS privacyFlag,
+				MARKETING_FLAG AS marketingFlag, USER_LEVEL AS userLevel, REGISTER_DATE AS regDate, DELETE_FLAG AS deleteFlag, DELETE_DATE AS delDate,
+				USER_AVATAR AS userAvatar
+		FROM TRAVLER_USER
+	</select>
+
+	<insert id="insertUser">
+		INSERT INTO TRAVLER_USER VALUES 
+		(USER_SEQ.NEXTVAL, #{userName}, #{userEmail}, #{userPassword}, #{isPrivacy}, #{privacyFlag}, #{marketingFlag}, SYSDATE, 0, NULL, NULL)
+	</insert>
+
+</mapper>

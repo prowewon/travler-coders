@@ -1,0 +1,22 @@
+@import "reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import "variables.css";
+
+/* components */
+@import "components/screen-header.css";
+@import "components/screen-footer.css";
+@import "components/course__box.css";
+@import "components/challenge__box.css";
+@import "components/screen__main-header.css";
+@import "components/no-mobile.css";
+
+/* screens */
+@import "screens/login.css";
+@import "screens/main.css";
+@import "screens/challenges.css";
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #2e363e;
+  padding-top: 150px;
+}
