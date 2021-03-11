@@ -16,11 +16,11 @@ import lombok.extern.log4j.Log4j;
 @AllArgsConstructor
 public class MainController {
 	
-	private CourseService cService;
+	private CourseService courseService;
 	
 	@GetMapping("")
 	public String main(Model model) {
-		model.addAttribute("courses", cService.getList());
+		model.addAttribute("courses", courseService.getList());
 		return "index";
 	}
 

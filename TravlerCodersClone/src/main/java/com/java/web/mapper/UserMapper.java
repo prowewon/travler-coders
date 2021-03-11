@@ -6,7 +6,9 @@ import com.java.web.domain.UserVO;
 
 public interface UserMapper {
 	
-	public List<UserVO> getList();
+	public String duplicateEmail(String email);
 
 	public void insertUser(UserVO userVO);
+	
+	public String login(UserVO userVO);
 }

@@ -22,11 +22,11 @@
     </header>
     <main class="login-main">
         <h1 class="login-main__title">Log in to Travler Coders</h1>
-        <form class="login-form" action="" method="GET">
+        <form class="login-form" action="/login/login" method="post">
             <h6 class="login-form__title">Email Address</h6>
-            <input class="login-form__email login-form__btns" type="text">
+            <input class="login-form__email login-form__btns" type="text" name="userEmail">
             <h6 class="login-form__title">Password</h6>
-            <input class="login-form__email login-form__btns" type="password">
+            <input class="login-form__email login-form__btns" type="password" name="userPassword">
             <input class="login-form__btn login-form__btns" type="submit" value="Continue">
         </form>
         <div class="or__line">

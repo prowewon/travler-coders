@@ -3,16 +3,27 @@
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.java.web.mapper.UserMapper">
-	<select id="getList" resultType="com.java.web.domain.UserVO">
+	<!-- <select id="duplicateEmail" resultType="string">
 		SELECT USER_NUMBER AS userNo, USER_NAME AS userName, USER_EMAIL AS userEmail, USER_PASSWORD AS userPassword, PRIVACY_FLAG AS privacyFlag,
 				MARKETING_FLAG AS marketingFlag, USER_LEVEL AS userLevel, REGISTER_DATE AS regDate, DELETE_FLAG AS deleteFlag, DELETE_DATE AS delDate,
 				USER_AVATAR AS userAvatar
 		FROM TRAVLER_USER
+	</select> -->
+	<select id="duplicateEmail" resultType="string">
+		SELECT USER_EMAIL
+		FROM TRAVLER_USER
+		WHERE USER_EMAIL = #{userEmail}
 	</select>
 
 	<insert id="insertUser">
 		INSERT INTO TRAVLER_USER VALUES 
-		(USER_SEQ.NEXTVAL, #{userName}, #{userEmail}, #{userPassword}, #{isPrivacy}, #{privacyFlag}, #{marketingFlag}, SYSDATE, 0, NULL, NULL)
+		(USER_SEQ.NEXTVAL, #{userName}, #{userEmail}, #{userPassword}, #{privacyFlag}, #{marketingFlag}, 1, SYSDATE, 0, NULL, NULL)
 	</insert>
+	
+	<select id="login" resultType="string">
+		SELECT USER_NAME
+		FROM TRAVLER_USER
+		WHERE USER_EMAIL = #{userEmail} AND USER_PASSWORD = #{userPassword}
+	</select>
 
 </mapper>

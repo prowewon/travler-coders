@@ -21,8 +21,21 @@ public class UserServiceImpl implements UserService{
 	private UserMapper mapper;
 	
 	@Override
-	public List<UserVO> getList() {
-		log.info("service......................");
-		return mapper.getList();
+	public String duplicateEmail(String email) {
+		log.info("duplicateEmail");
+		return mapper.duplicateEmail(email);
 	}
+	
+	@Override
+	public void insertUser(UserVO userVO) {
+		log.info("insertUser");
+		mapper.insertUser(userVO);
+	}
+	
+	@Override
+	public String login(UserVO userVO) {
+		log.info("login");
+		return mapper.login(userVO);
+	}
+	
 }
